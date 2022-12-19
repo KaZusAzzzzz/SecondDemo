@@ -1,7 +1,7 @@
 <template>
   <el-card class="box-card">
     <slot name="main">
-    <img src="@/assets/img1 (4).jpg" alt="" class="main">
+    <img src="@/assets/first.jpg" alt="" class="main">
     </slot>
   </el-card>
 </template>
