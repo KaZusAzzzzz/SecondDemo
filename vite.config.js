@@ -7,7 +7,7 @@ import path from 'path'
 
 path.resolve(__dirname, 'src');
 // https://vitejs.dev/config/
-export default ({ mode }) => defineConfig({
+export default defineConfig({
     plugins: [vue(),
         AutoImport({
             resolvers: [ElementPlusResolver()],
@@ -21,7 +21,6 @@ export default ({ mode }) => defineConfig({
             '@': path.resolve(__dirname, './src')
         }
     },
-    base: mode == 'development' ? './' : (mode == 'beta' ? '//s.baidu.com/beta/xxx' : '//s.baidu.com/release/xxx'), // 静态资源路径配置
     //配置proxy代理接口
     server: {
         proxy: {
