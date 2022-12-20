@@ -8,7 +8,9 @@ import path from 'path'
 path.resolve(__dirname, 'src');
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [vue(),
+    base: './',
+    plugins: [
+        vue(),
         AutoImport({
             resolvers: [ElementPlusResolver()],
         }),
