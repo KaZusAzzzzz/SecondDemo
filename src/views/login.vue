@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import {reactive, ref,} from 'vue';
+import {reactive, ref,onMounted} from 'vue';
 import {useRouter} from "vue-router";
 
 import {ElMessage} from "element-plus";
@@ -52,6 +52,11 @@ import img from '@/assets/img1 (2).jpg';
 import axios from '@/utils/axios.js'
 import md5 from 'js-md5';
 import {localSet,} from '@/utils/index.js'
+import config from "@/config/index.js";
+onMounted(() => {
+  console.log(config)
+  console.log(import.meta.env.MODE)
+})
 
 const url = img;
 const router = useRouter();
